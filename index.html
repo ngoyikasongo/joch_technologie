@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Calcul Mental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Calcul Mental</h1>
+        
+        <div class="score-board">
+            <p>Score: <span id="score">0</span></p>
+            <p>Niveau: <span id="niveau">1</span></p>
+        </div>
+
+        <div class="operation-select">
+            <button onclick="selectionnerOperation('+')" class="op-btn">Addition</button>
+            <button onclick="selectionnerOperation('-')" class="op-btn">Soustraction</button>
+            <button onclick="selectionnerOperation('×')" class="op-btn">Multiplication</button>
+            <button onclick="selectionnerOperation('÷')" class="op-btn">Division</button>
+            <button onclick="selectionnerOperation('mix')" class="op-btn mix">Mode Mixte</button>
+        </div>
+
+        <div class="game-area">
+            <div class="calcul" id="calcul">Choisissez une opération</div>
+            <input type="number" id="userAnswer" placeholder="Votre réponse" step="any">
+            <button onclick="verifierReponse()" id="submitBtn" disabled>Vérifier</button>
+        </div>
+
+        <div class="message" id="message"></div>
+        <div class="stats">
+            <p>Bonnes réponses: <span id="bonnesReponses">0</span></p>
+            <p>Questions totales: <span id="totalQuestions">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
